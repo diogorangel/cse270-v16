@@ -14,9 +14,9 @@ GitHub Actions
 
 Chrome Headless Browser
 
-The project includes automated smoke testing to validate that the web application loads correctly and that core functionality works as expected.
+# The project includes automated smoke testing to validate that the web application loads correctly and that core functionality works as expected.
 
-Project Structure
+# Project Structure
 cse270-v16/
 │
 ├── test_smokeside.py        # Selenium smoke test
@@ -26,39 +26,39 @@ cse270-v16/
 │       └── main.yml         # CI/CD pipeline configuration
 └── README.md
 
-Technologies Used
+- Technologies Used
 
-Python 3.12+
+- Python 3.12+
 
-Pytest
+- Pytest
 
-Selenium
+- Selenium
 
-Chrome WebDriver
+- Chrome WebDriver
 
-GitHub Actions
+- GitHub Actions
 
-HTTP Server Action
+- HTTP Server Action
 
-Smoke Test Description
+- Smoke Test Description
 
-The smoke test (test_smokeside.py) verifies:
+- The smoke test (test_smokeside.py) verifies:
 
-Homepage loads successfully
+- Homepage loads successfully
 
-Key UI elements are present
+- Key UI elements are present
 
-Navigation links work correctly
+- Navigation links work correctly
 
-Directory view switches correctly
+- Directory view switches correctly
 
-Join form submission works
+- Join form submission works
 
-Admin login shows an error message for invalid credentials
+- Admin login shows an error message for invalid credentials
 
-The test runs using Chrome in headless mode during CI execution.
+- The test runs using Chrome in headless mode during CI execution.
 
-Running Tests Locally
+# Running Tests Locally
 1. Install dependencies
 pip install -r requirements.txt
 
@@ -67,7 +67,7 @@ Or manually:
 
 pip install pytest selenium
 
-2. Start Local Web Server (Port 5500)
+# 2. Start Local Web Server (Port 5500)
 
 The test expects the site to run on:
 
@@ -82,7 +82,7 @@ Or Python HTTP server:
 
 python -m http.server 5500
 
-3. Run Tests
+# 3. Run Tests
 pytest -v
 
 Viewing Test Results in VS Code
@@ -96,7 +96,7 @@ Run:
 pytest -v
 
 
-Results will appear in the terminal:
+# Results will appear in the terminal:
 
 ✔ PASSED
 
@@ -132,7 +132,7 @@ List of tests
 
 ❌ Red (failed)
 
-Option 3 – HTML Test Report
+# Option 3 – HTML Test Report
 
 If pytest-html is installed:
 
@@ -174,7 +174,7 @@ The workflow expects the server to run on:
 port: 5500
 
 
-If you change the port in your test file, you must also update it in:
+# If you change the port in your test file, you must also update it in:
 
 .github/workflows/main.yml
 
@@ -187,7 +187,7 @@ options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
 
-Headless mode is required because CI environments do not have a graphical interface.
+# Headless mode is required because CI environments do not have a graphical interface.
 
 Expected CI Flow
 
